@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.itcast.erp.entity.Emp" table="emp" >
+        <id name="uuid" >
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="sequence_name">emp_seq</param>
+            </generator>
+        </id>
+
+        <property name="username" />
+        <!--表示在执行更新时 pwd字段不会被更新 插入不受影响。使用hql语句也不受影响-->
+        <property name="pwd" update="false"/>
+        <property name="name" /> 
+        <property name="gender" /> 
+        <property name="email" /> 
+        <property name="tele" /> 
+        <property name="address" /> 
+        <property name="birthday" /> 
+
+        <many-to-one name="dep" class="cn.itcast.erp.entity.Dep" column="DEPUUID"/>
+
+        <bag name="roles" order-by="ROLEUUID" table="EMP_ROLE">
+            <key column="EMPUUID"></key>
+            <many-to-many class="cn.itcast.erp.entity.Role" column="ROLEUUID"/>
+        </bag>
+ 
+    </class>
+</hibernate-mapping>

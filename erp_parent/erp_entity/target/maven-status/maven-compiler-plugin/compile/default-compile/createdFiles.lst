@@ -1,0 +1,15 @@
+cn\itcast\erp\entity\Supplier.class
+cn\itcast\erp\entity\Goods.class
+cn\itcast\erp\entity\Emp.class
+cn\itcast\erp\entity\Goodstype.class
+cn\itcast\erp\entity\Storedetail.class
+cn\itcast\erp\entity\Storeoper.class
+cn\itcast\erp\entity\Role.class
+cn\itcast\erp\entity\Inventory.class
+cn\itcast\erp\entity\Returnorderdetail.class
+cn\itcast\erp\entity\Dep.class
+cn\itcast\erp\entity\Orderdetail.class
+cn\itcast\erp\entity\Store.class
+cn\itcast\erp\entity\Menu.class
+cn\itcast\erp\entity\Orders.class
+cn\itcast\erp\entity\Returnorders.class

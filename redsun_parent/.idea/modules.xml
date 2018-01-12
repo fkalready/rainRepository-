@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/redsun_biz/redsun_biz.iml" filepath="$PROJECT_DIR$/redsun_biz/redsun_biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redsun_dao/redsun_dao.iml" filepath="$PROJECT_DIR$/redsun_dao/redsun_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redsun_entity/redsun_entity.iml" filepath="$PROJECT_DIR$/redsun_entity/redsun_entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redsun_parent.iml" filepath="$PROJECT_DIR$/redsun_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redsun_web/redsun_web.iml" filepath="$PROJECT_DIR$/redsun_web/redsun_web.iml" />
+    </modules>
+  </component>
+</project>

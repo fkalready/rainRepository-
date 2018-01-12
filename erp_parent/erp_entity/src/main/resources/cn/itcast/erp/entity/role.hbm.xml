@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.itcast.erp.entity.Role" table="role" >
+        <id name="uuid" >
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator"> <param name="sequence_name">role_seq</param> </generator>
+        </id>
+
+        <property name="name" />
+
+        <bag name="menus" order-by="MENUUUID" table="ROLE_MENU">
+            <key column="ROLEUUID"></key>
+            <many-to-many class="cn.itcast.erp.entity.Menu" column="MENUUUID"/>
+        </bag>
+ 
+    </class>
+</hibernate-mapping>

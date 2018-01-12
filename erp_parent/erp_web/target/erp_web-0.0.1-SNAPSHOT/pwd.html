@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>重置密码</title>
+    <link rel="stylesheet" type="text/css" href="ui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="ui/themes/icon.css">
+    <script type="text/javascript" src="ui/jquery.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
+    <script type="text/javascript" src="ui/date.js"></script>
+    <script type="text/javascript" src="js/pwd.js"></script>
+</head>
+<body>
+
+<table id="grid"></table>
+
+<div id="dd">
+    <div style="padding: 3px"></div>
+    <form id="resetForm" >
+    <input type="hidden" id="uuid" name="uuid"/>
+    新密码:<input name="newPwd" id="newPwd" type="password" />
+    <div style="padding: 3px"></div>
+    请确认:<input name="rePwd" id="rePwd" type="password" />
+    </form>
+</div>
+</body>
+</html>

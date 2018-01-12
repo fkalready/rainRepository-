@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="redsun_biz" />
+        <module name="redsun_dao" />
+        <module name="redsun_entity" />
+        <module name="redsun_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="redsun_biz" target="1.7" />
+      <module name="redsun_dao" target="1.7" />
+      <module name="redsun_entity" target="1.7" />
+      <module name="redsun_parent" target="1.7" />
+      <module name="redsun_web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

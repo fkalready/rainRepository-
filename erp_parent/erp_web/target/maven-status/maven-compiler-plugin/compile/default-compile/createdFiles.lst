@@ -1,0 +1,16 @@
+cn\itcast\erp\action\DepAction.class
+cn\itcast\erp\action\StoreAction.class
+cn\itcast\erp\action\GoodsAction.class
+cn\itcast\erp\action\MenuAction.class
+cn\itcast\erp\action\OrdersAction.class
+cn\itcast\erp\action\SupplierAction.class
+cn\itcast\erp\action\ReturnorderdetailAction.class
+cn\itcast\erp\action\ReturnordersAction.class
+cn\itcast\erp\action\InventoryAction.class
+cn\itcast\erp\action\EmpAction.class
+cn\itcast\erp\action\StoredetailAction.class
+cn\itcast\erp\action\OrderdetailAction.class
+cn\itcast\erp\action\GoodstypeAction.class
+cn\itcast\erp\action\BaseAction.class
+cn\itcast\erp\action\StoreoperAction.class
+cn\itcast\erp\action\RoleAction.class

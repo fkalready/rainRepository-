@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单管理</title>
+<link rel="stylesheet" type="text/css" href="ui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="ui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="css/table.css">
+<script type="text/javascript" src="ui/jquery.min.js"></script>
+<script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
+<script type="text/javascript" src="ui/date.js"></script>
+<script type="text/javascript" src="ui/request.js"></script>
+<script type="text/javascript" src="ui/download.js"></script>
+<script type="text/javascript" src="js/orders.js"></script>
+<script type="text/javascript" src="js/orders_add.js"></script>
+
+</head>
+<body>
+<div class="easyui-panel" style="padding-left:4px;border-bottom:0px;">
+	<div style="height:2px;"></div>
+	<form id="searchForm">
+		<table>
+			<tr>
+				<td>生成日期：</td>
+				<td><input name="t1.createtime" ></td>
+				<td>审核日期：</td>
+				<td><input name="t1.checktime" ></td>
+				<td>确认日期：</td>
+				<td><input name="t1.starttime" ></td>
+				<td>入库日期：</td>
+				<td><input name="t1.endtime" ></td>
+				<td>下单员：</td>
+				<td><input name="t1.creater" ></td>
+				<td rowspan="2" align="center"><button type="button" id="btnSearch">查询</button></td>
+			</tr>
+			<tr>
+				<td>审核员：</td>
+				<td><input name="t1.checker" ></td>
+				<td>采购员：</td>
+				<td><input name="t1.starter" ></td>
+				<td>库管员：</td>
+				<td><input name="t1.ender" ></td>
+				<td>供应商：</td>
+				<td><input name="t1.supplieruuid" ></td>
+				<td>状态：</td>
+				<td><input name="t1.state" ></td>
+			</tr>
+		</table>
+
+	</form>
+	<div style="height:2px;"></div>
+</div>
+<table id="grid"></table>
+
+<div id="ordersDlg" style="padding:2px;">
+	<table class="hovertable">
+		<tr>
+			<td class="bg">流水号</td>
+			<td id="uuid"></td>
+			<td class="bg">供应商</td>
+			<td colspan="3" id="supplierName"></td>
+			<td class="bg">状态</td>
+			<td id="state"></td>
+		</tr>
+		<tr>
+			<td class="bg" width="10%">下单人</td>
+			<td width="15%" id="createrName"></td>
+			<td class="bg" width="10%">审核人</td>
+			<td width="15%" id="checkerName"></td>
+			<td class="bg" width="10%">确认人</td>
+			<td width="15%" id="starterName"></td>
+			<td class="bg" width="10%">库管员</td>
+			<td width="15%" id="enderName"></td>
+		</tr>
+		<tr>
+			<td class="bg noBorderBottom">下单日期</td>
+			<td class="noBorderBottom" id="createtime"></td>
+			<td class="bg noBorderBottom">审核日期</td>
+			<td class="noBorderBottom" id="checktime"></td>
+			<td class="bg noBorderBottom">确认日期</td>
+			<td class="noBorderBottom" id="starttime"></td>
+			<td class="bg noBorderBottom">入库日期</td>
+			<td class="noBorderBottom" id="endtime"></td>
+		</tr>
+		<tr>
+			<td class="bg noBorderBottom">订单号</td>
+			<td class="noBorderBottom" id="waybillsn"></td>
+			<td class="bg noBorderBottom"></td>
+			<td class="noBorderBottom"></td>
+			<td class="bg noBorderBottom"></td>
+			<td class="noBorderBottom"></td>
+			<td class="bg noBorderBottom"></td>
+			<td class="noBorderBottom"></td>
+		</tr>
+	</table>
+	<!-- 明细列表 -->
+	<table id="itemgrid"></table>
+</div>
+<!-- 入库窗口 -->
+<div id="itemDlg" style="padding:2px;">
+	<form id="itemForm">
+		 <!--明细的编号-->
+		<input id="id" name="id" type="hidden">
+		<table class="hovertable">
+			<tr>
+				<td class="bg" width="30%">商品编号</td>
+				<td width="70%" id="goodsuuid"></td>
+			</tr>
+			<tr>
+				<td class="bg">商品名称</td>
+				<td id="goodsname"></td>
+			</tr>
+			<tr>
+				<td class="bg">数量</td>
+				<td id="num"></td>
+			</tr>
+			<tr>
+				<td class="bg">仓库</td>
+				<td><input name="storeuuid" class="easyui-combobox" data-options="
+					url:'store_list.action',textField:'name',valueField:'uuid'
+				"></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+<div id="addOrdersDlg" style="padding: 2px">
+	<form id="ccinput">
+		<span id="ordersupplier">:</span>:<input id="cc" name="t.supplieruuid" />
+		<div style="height:2px"></div>
+	</form>
+	<table id="ordersgrid"></table>
+</div>
+
+<div id="waybillDlg" style="padding: 2px">
+	<div id="waybillGrid"></div>
+</div>
+</body>
+</html>
